@@ -212,7 +212,7 @@ configure_bot_backup() {
                 echo " 2. $(t bot_jesus_priv)"
                 echo " 3. $(t bot_machka)"
                 echo " 4. $(t bot_snoups)"
-                echo " 5. $(t bot_Bedolaga)"
+                echo " 5. $(t bot_bedolaga)"
                 echo " 0. $(t back)"
                 echo ""
                 
@@ -223,7 +223,7 @@ configure_bot_backup() {
                     2) BOT_BACKUP_SELECTED="Приватный бот от Иисуса"; bot_folder="rwp-shop" ;;
                     3) BOT_BACKUP_SELECTED="Бот от Мачки"; bot_folder="remnawave-tg-shop" ;;
                     4) BOT_BACKUP_SELECTED="Бот от Snoups"; bot_folder="remnashop" ;;
-                    5) BOT_BACKUP_SELECTED="Бот от Bedolaga"; bot_folder="Bedolaga-bot" ;;
+                    5) BOT_BACKUP_SELECTED="Бот от Bedolaga"; bot_folder="bedolaga-bot" ;;
                     0) continue ;;
                     *) print_message "ERROR" "$(t invalid_input)"; sleep 1; continue ;;
                 esac
@@ -327,9 +327,6 @@ get_bot_params() {
             ;;
         "Бот от Snoups")
             echo "remnashop-db|remnashop-db-data|remnashop|remnashop-db"
-            ;;
-        *)
-            echo "|||"
             ;;
         "Бот от Bedolaga")
             echo "remnawave_bot|remnawave_bot_db|remnawave_bot_redis"
@@ -455,7 +452,7 @@ restore_bot_backup() {
     echo " 2. $(t bot_jesus_priv)"
     echo " 3. $(t bot_machka)"
     echo " 4. $(t bot_snoups)"
-    echo " 5. $(t bot_Bedolaga)"
+    echo " 5. $(t bot_bedolaga)"
     echo ""
     
     local bot_choice
