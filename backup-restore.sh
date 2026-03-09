@@ -212,6 +212,7 @@ configure_bot_backup() {
                 echo " 2. $(t bot_jesus_priv)"
                 echo " 3. $(t bot_machka)"
                 echo " 4. $(t bot_snoups)"
+                echo " 5. $(t bot_Bedolaga)"
                 echo " 0. $(t back)"
                 echo ""
                 
@@ -454,6 +455,7 @@ restore_bot_backup() {
     echo " 2. $(t bot_jesus_priv)"
     echo " 3. $(t bot_machka)"
     echo " 4. $(t bot_snoups)"
+    echo " 5. $(t bot_bedolaga)"
     echo ""
     
     local bot_choice
@@ -465,6 +467,7 @@ restore_bot_backup() {
             2) selected_bot_name="Приватный бот от Иисуса"; break ;;
             3) selected_bot_name="Бот от Мачки"; break ;;
             4) selected_bot_name="Бот от Snoups"; break ;;
+            5) selected_bot_name="Бот от Bedolaga"; break ;;
             *) print_message "ERROR" "$(t invalid_input)" ;;
         esac
     done
