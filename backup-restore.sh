@@ -222,6 +222,7 @@ configure_bot_backup() {
                     2) BOT_BACKUP_SELECTED="Приватный бот от Иисуса"; bot_folder="rwp-shop" ;;
                     3) BOT_BACKUP_SELECTED="Бот от Мачки"; bot_folder="remnawave-tg-shop" ;;
                     4) BOT_BACKUP_SELECTED="Бот от Snoups"; bot_folder="remnashop" ;;
+                    5) BOT_BACKUP_SELECTED="Бот от Bedolaga"; bot_folder="bedolaga-bot" ;;
                     0) continue ;;
                     *) print_message "ERROR" "$(t invalid_input)"; sleep 1; continue ;;
                 esac
@@ -325,6 +326,12 @@ get_bot_params() {
             ;;
         "Бот от Snoups")
             echo "remnashop-db|remnashop-db-data|remnashop|remnashop-db"
+            ;;
+        *)
+            echo "|||"
+            ;;
+        "Бот от Bedolaga")
+            echo "remnawave_bot|remnawave_bot_db|remnawave_bot_redis"
             ;;
         *)
             echo "|||"
