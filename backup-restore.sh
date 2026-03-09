@@ -12,7 +12,7 @@ RETAIN_BACKUPS_DAYS=7
 S3_RETAIN_DAYS=30
 SYMLINK_PATH="/usr/local/bin/rw-backup"
 REMNALABS_ROOT_DIR=""
-SCRIPT_REPO_URL="https://raw.githubusercontent.com/xorgbtw/remnawave-backup-restore/main/backup-restore.sh"
+SCRIPT_REPO_URL="https://raw.githubusercontent.com/distillium/remnawave-backup-restore/main/backup-restore.sh"
 SCRIPT_RUN_PATH="$(realpath "$0")"
 GD_CLIENT_ID=""
 GD_CLIENT_SECRET=""
@@ -223,7 +223,7 @@ configure_bot_backup() {
                     2) BOT_BACKUP_SELECTED="Приватный бот от Иисуса"; bot_folder="rwp-shop" ;;
                     3) BOT_BACKUP_SELECTED="Бот от Мачки"; bot_folder="remnawave-tg-shop" ;;
                     4) BOT_BACKUP_SELECTED="Бот от Snoups"; bot_folder="remnashop" ;;
-                    5) BOT_BACKUP_SELECTED="Бот от Bedolaga"; bot_folder="bedolaga-bot" ;;
+                    5) BOT_BACKUP_SELECTED="Бот от Bedolaga"; bot_folder="remnawave-bedolaga-telegram-bot" ;;
                     0) continue ;;
                     *) print_message "ERROR" "$(t invalid_input)"; sleep 1; continue ;;
                 esac
